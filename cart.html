@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Boppys</title>
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <div class="button-container">
+    <button id="back-button">← Back to Boppy's</button>
+</div>
+
+
+  <div class="container">
+  <h1>Your Basket 🛒</h1>
+  <div id="cart-items"></div>
+  <p id="total"></p>
+  <div class="cart-buttons">
+    <p><em>"Unfortunately, since Boppy's isn’t a real store, we can only offer a ‘Pay In Store’ option at the moment!"</em></p>
+  <button onclick="clearCart()">Clear Basket</button>
+  <button onclick="window.location.href='checkout.html'">Pay In Store</button>
+  <img src="boppys logo 2.png" alt="Boppys Logo" class="logo" />
+  </div>
+  </div>
+
+  <script>
+    const cartItemsDiv = document.getElementById('cart-items');
+    const totalEl = document.getElementById('total');
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function renderCart() {
+      cartItemsDiv.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <p>${item.name} - £${item.price.toFixed(2)} 
+          <button onclick="removeItem(${index})">Remove</button></p>
+        `;
+        cartItemsDiv.appendChild(div);
+      });
+      totalEl.textContent = `Total: £${total.toFixed(2)}`;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    renderCart();
+
+    document.getElementById('back-button').addEventListener('click', () => {
+  window.location.href = 'index.html'; 
+  });
+  </script>
+</body>
+</html>

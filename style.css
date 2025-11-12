@@ -1,0 +1,866 @@
+/* CSS FOR BOPPYS CHICKEN SHOP */ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff7f7;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* BUTTONS */
+
+#toggleMode,
+#menu-toggle,
+#cart-button {
+  background-color: #dd1111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 1.2rem;
+  height: 60px;            
+  padding: 0 1.5rem;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#toggleMode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 120px;
+}
+
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  min-width: 120px;
+}
+
+#cart-button {
+  position: fixed;
+  top: 20px;
+  right: 220px; 
+  min-width: 120px;
+}
+
+/* CART BUTTON */
+
+#cart-button:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+#cart-count {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-text {
+  letter-spacing: 0.5px;
+}
+
+/* NAVBAR */ 
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; 
+  width: 250px;
+  height: 100%;
+  background-color: #dd1111;
+  padding-top: 50px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 1000;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+#menu-toggle {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  height: 60px;
+}
+
+#menu-toggle:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+#sidebar.active {
+  left: 0; 
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 2rem;
+}
+
+#sidebar ul li a:hover {
+  color: yellow;
+}
+
+#intro-text { 
+  font-family: 'Luckiest Guy', sans-serif;
+  color: #dd1111;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+  text-align: center;
+  font-style: italic;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+}
+
+/* HERO PHOTOS */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+}
+
+.hero-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-section img.active {
+  opacity: 1;
+}
+
+/* MENU SECTION */
+
+#menu { 
+  max-width: 1200px; 
+  margin: 4rem auto; 
+  padding: 0 1rem; 
+  font-family: 'Montserrat', sans-serif; 
+} 
+
+.menu-heading,
+.merch-heading { 
+  text-align: center; 
+  font-size: 2.2rem; 
+  color: #dd1111; 
+  margin-bottom: 3rem; 
+  font-family: 'Luckiest Guy', sans-serif;
+} 
+
+.menu-container { 
+  display: flex; 
+  justify-content: center;
+  align-items: stretch; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
+  margin-bottom: 4rem; 
+}
+
+.menu-item {
+  background-color: #dd1111;
+  color: #FFFFFF;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+  min-height: 480px;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain; 
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.menu-item button {
+  cursor: pointer;
+  background-color: white;
+  color: #dd1111;
+  font-size: 1rem;         
+  font-weight: 700;        
+  padding: 0.8rem 1.6rem;   
+  border: none;              
+  border-radius: 0.5rem;    
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-item button:hover {
+  background-color: #ffeaea; 
+  transform: scale(1.05);    
+}
+
+.item-price {
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 30px;
+}
+
+.delivery-services {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  margin: 2rem 0;
+}
+
+.delivery-logo {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  border-radius: 12px;
+  background: white; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.delivery-logo img:hover {
+  transform: scale(1.1);
+}
+
+#menuSearchInput::placeholder {
+  color: #dd1111;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+#menuSearchInput:focus {
+  border-color: #ffcc00;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffcc00;
+  transform: scale(1.02);
+}
+
+.secret-item {
+  border: 3px dashed #ffcc00;
+  background: linear-gradient(135deg, #dd1111 0%, #ff6600 100%);
+  position: relative;
+  animation: revealSecret 0.8s ease forwards;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secret-item::before {
+  content: "🤫 SECRET MENU";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #ffcc00;
+  color: #000;
+  font-family: 'Montserrat', sans-serif; 
+  padding: 4px 8px;
+  border-radius: 8px;
+  transform: rotate(-5deg);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+@keyframes revealSecret {
+  from { opacity: 0; transform: scale(0.9) rotate(-2deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+/* MERCH SECTION */
+
+.merch-carousel {
+  width: 100%;
+  padding: 40px 0;
+  max-width: 1400px;
+}
+
+.merch-item {
+  text-align: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  background-color: grey;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.merch-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.merch-name {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.merch-price {
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.merch-item:hover {
+  transform: scale(2);
+  z-index: 2;
+  filter: brightness(0.99) saturate(0.9) sepia(0.2) hue-rotate(15deg);
+}
+
+.merch-item:hover .merch-image {
+  transform: scale(1.1);
+}
+
+#merch {
+  text-align: center;
+  background-color: #fff7f7;
+  border-top: 4px solid #dd1111;
+  padding: 4rem;
+  }
+
+.merch-item button {
+  cursor: pointer;
+  background-color: white;
+  color: #dd1111;
+  font-size: 1rem;         
+  font-weight: 700;        
+  padding: 0.8rem 1.6rem;   
+  border: none;              
+  border-radius: 0.5rem;    
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.merch-item button:hover {
+  background-color: #ffeaea; 
+  transform: scale(1.05);    
+}
+
+.menu-search {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+#menuSearchInput {
+  width: 80%;
+  max-width: 420px;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  font-family: 'Work Sans', sans-serif;
+  border: 3px solid #dd1111;
+  border-radius: 12px;
+  outline: none;
+  background-color: #fff7f7;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+ 
+/* STORE FINDER */
+
+#finder {
+  padding: 80px 20px;
+  background: #fff3f3;
+  border-top: 4px solid #dd1111;
+  border-bottom: 4px solid #dd1111;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Luckiest Guy', sans-serif;
+  color: #dd1111;
+  font-size: 2rem;
+}
+
+.finder-map { 
+  flex: 2 1 500px; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+  max-width: 50%; 
+  margin: 0 auto; 
+}
+
+/* REVIEW SECTION */
+
+#reviews {
+  background: #fff3f3;
+  border-top: 4px solid #dd1111;
+  border-bottom: 4px solid #dd1111;
+  padding: 4rem 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 1100px;
+  margin: 4rem auto;
+  border-radius: 1.5rem;
+}
+
+#reviews h2 {
+  font-family: 'Luckiest Guy', sans-serif;
+  color: #dd1111;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+  .reviews-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .review-card {
+    background: #fff;
+    border-radius: 0.9rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    will-change: opacity, transform;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+.review-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  .review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .review-text {
+    margin: 0 0 0.6rem 0; 
+    line-height: 1.45; 
+}
+
+  .stars { 
+    color: #fbbf24; 
+    font-size: 1.1rem; 
+    margin-bottom: .25rem; 
+}
+  
+.reviewer { 
+  color: #666; 
+  font-size: 0.9rem; 
+  font-style: italic; 
+  margin: 0; 
+}
+
+/* FOOTER / CONTACT */
+
+footer {
+  background-color: #dd1111;
+  color: white;
+  padding: 3rem 1rem 1rem;
+  font-family: 'Work Sans', sans-serif;
+  border-top: 4px solid #ffcc00;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-container h3,
+.footer-container h4 {
+  font-family: 'Luckiest Guy', sans-serif;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-about p {
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: yellow;
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: yellow;
+}
+
+.socials {
+  margin-top: 0.75rem;
+}
+
+.socials a {
+  font-size: 1.5rem;
+  margin-right: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #f9dcdc;
+}
+
+/* NIGHT MODE COLOURS */
+
+#toggleMode:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+body.night-mode {
+ background-color: black;
+}
+
+body.night-mode #finder, 
+body.night-mode #merch,
+body.night-mode #reviews {
+  background: #111; 
+  color: #fff;
+  border-top: 4px solid #ffcc00;
+  border-bottom: 4px solid #ffcc00;
+}
+
+body.night-mode #reviews p {
+  color: black;
+}
+
+body.night-mode .menu-heading,
+body.night-mode .merch-heading,
+body.night-mode #reviews h2,
+body.night-mode #finder,
+body.night-mode footer h3,
+body.night-mode footer h4 {
+  color: #ffffff !important;
+}
+
+
+#toggleMode,
+#menu-toggle,
+#cart-button {
+  position: fixed;
+  z-index: 5000; 
+}
+
+/*  MEDIA QUERIES */
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;       
+    min-height: 250px;  
+    overflow: hidden;
+  }
+
+  .menu-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0;
+  }
+
+  .hero-section img.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  #toggleMode { 
+    top: 20px; r
+    ight: 20px; 
+    width: 100px; 
+    font-size: 0.9rem; 
+    height: 50px; 
+  }
+
+  #menu-toggle { 
+    top: 80px; 
+    left: 20px; 
+    width: 100px; 
+    font-size: 0.9rem; 
+    height: 50px; 
+  }
+
+  #cart-button { 
+    top: 140px; 
+    right: 20px; 
+    width: 100px; 
+    font-size: 0.9rem; 
+    height: 50px; 
+  }
+
+  .menu-container { 
+    flex-direction: column; 
+    gap: 1rem; 
+  }
+
+  .menu-item { 
+    flex: 1 1 100%; 
+    max-width: 100%; 
+    min-height: auto; 
+  }
+
+  .merch-item { 
+    flex: 1 1 100%; 
+    max-width: 100%; 
+    margin-bottom: 1.5rem; 
+  }
+
+  .merch-item:hover { 
+    transform: scale(1.03); 
+    z-index: 1; 
+  }
+
+  .merch-image { 
+    width: 100%; 
+    height: auto; 
+  }
+
+  .merch-item button { 
+    width: 90%; 
+    font-size: 0.9rem; 
+    padding: 0.6rem 0.8rem; 
+    margin: 0.5rem auto; 
+    display: block; 
+  }
+}
+
+ 
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 300px;
+    overflow: hidden;
+  }
+
+  .hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0;
+  }
+
+  .hero-section img.active { 
+    opacity: 1; 
+    z-index: 2; 
+  }
+
+  #toggleMode { top: 20px; 
+    right: 20px; 
+    width: 110px; 
+    font-size: 1rem; 
+    height: 55px; 
+  }
+
+  #menu-toggle { 
+    top: 80px; 
+    left: 20px; 
+    width: 110px;
+    font-size: 1rem; 
+    height: 55px; 
+  }
+
+  #cart-button { 
+    top: 140px; 
+    right: 20px; 
+    width: 110px; 
+    font-size: 1rem; 
+    height: 55px;
+   }
+
+  .menu-container { 
+    gap: 1.5rem; 
+  }
+
+  .menu-item { 
+    flex: 1 1 calc(50% - 1.5rem); 
+    max-width: calc(50% - 1.5rem); 
+  }
+
+  .merch-item:hover { 
+    transform: scale(1.05); 
+    z-index: 2; 
+  }
+
+  .merch-item button { width: 95%; 
+    font-size: 1rem; 
+    padding: 0.7rem 1rem; 
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0;
+  }
+
+  .hero-section img.active { 
+    opacity: 1;
+     z-index: 2; 
+    }
+
+  #toggleMode { 
+    top: 20px; 
+    right: 20px; 
+  }
+
+  #menu-toggle { 
+    top: 20px; 
+    left: 20px; 
+  }
+
+  #cart-button {
+    top: 20px; 
+    right: 220px; 
+  }
+
+  .menu-container { 
+    gap: 2rem;
+  }
+
+  .menu-item { 
+    flex: 1 1 calc(33.333% - 2rem); 
+    max-width: calc(33.333% - 2rem); 
+  }
+
+  .merch-item:hover { 
+    transform: scale(1.15); 
+    z-index: 2; 
+  }
+
+  .merch-item button { 
+    width: 80%; 
+    font-size: 1rem; 
+    padding: 0.8rem 1.2rem; 
+  }
+}

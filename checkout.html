@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Number Boppys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #dd1111;
+      color: white;
+      text-align: center;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; /
+      gap: 1rem; 
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      margin-bottom: 1rem;
+    }
+
+    #order-number {
+      font-size: 2rem;
+      color: yellow;
+      margin: 1rem 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: white;
+      color: #dd1111;
+      cursor: pointer;
+      transition: transform 0.2s;
+      font-family: 'Luckiest Guy', sans-serif;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #dd1111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+      color: white;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2rem;
+    }
+
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid yellow;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #main-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading-screen">
+    Loading your order...
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container" id="main-content">
+    <h1>Your Order Number</h1>
+    <p>Awesome! Grab your unique order number and bring it to your nearest Boppys store. Thanks for choosing us — we can't wait to serve you!</p>
+    <div id="order-number">#7364</div>
+    <button id="back-button">Back to the Boppys Website</button>
+  </div>
+
+  <script>
+    const orderNumberEl = document.getElementById('order-number');
+
+    function generateOrderNumber() {
+      const randomNum = Math.floor(Math.random() * 9000) + 1000; 
+      orderNumberEl.textContent = `#${randomNum}`;
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'flex';
+        generateOrderNumber();
+      }, 3000); 
+    });
+
+    document.getElementById('back-button').addEventListener('click', () => {
+      window.location.href = 'index.html'; 
+    });
+  </script>
+
+</body>
+</html>

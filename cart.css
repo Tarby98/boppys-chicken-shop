@@ -1,0 +1,140 @@
+/* CART.HTML CSS */
+
+body {
+    background: linear-gradient(to bottom right, #ffefef, #fff7f7);
+}
+
+
+.container {
+    background-color: #dd1111;
+    color: white;   
+    border-radius: 15px; 
+    text-align: center;
+    padding: 1rem;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+h1 {
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container {
+    text-align: center; 
+    margin: 2rem 0;
+}
+
+#back-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #dd1111;
+    color: white;
+    border: none;
+    cursor: pointer;
+     font-family: 'Luckiest Guy', sans-serif;
+     transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#back-button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+.container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #white;
+    color: #dd1111;
+    border: none;
+    cursor: pointer;
+    font-family: 'Luckiest Guy', sans-serif;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.container button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+/* MEDIA QUERIES */
+
+/* PHONES */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+    padding: 1rem 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #back-button, .container button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .button-container {
+    margin: 1rem 0;
+  }
+
+  .logo {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 70%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #back-button, .container button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .logo {
+    width: 60%;
+    max-width: 250px;
+  }
+}
+
+/* BIGGER SCREENS  */
+@media (min-width: 769px) {
+  .container {
+    max-width: 50%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #back-button, .container button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    width: 50%;
+    max-width: 300px;
+  }
+}

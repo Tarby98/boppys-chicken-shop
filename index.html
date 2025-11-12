@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+ <head>
+  <title>Boppys Chicken Shop</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Boppys Chicken Shop">
+  <link href="style.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ </head>
+    
+ <body>
+
+     <!-- DAYTIME / NIGHTTIME BUTTON / SHOPPING CART BUTTON -->
+    
+    <button id="toggleMode" class="toggle-button"></button>
+   
+  <button id="cart-button"> 🛒 
+  <span class="cart-text">Cart</span>
+  <span id="cart-count">0</span>
+</button>
+   
+    <!-- NAVIGATION BAR -->
+   <header>
+     <button id="menu-toggle">☰ Navigation</button>
+     <nav id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#merch">Merch</a></li>
+            <li><a href="#finder">Store Finder</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Quick Links</a></li>
+            <li><a href="about.html">About Us</a></li> 
+            <li><a href="contact.html">Contact Us</a></li> 
+        </ul>
+      </nav>
+   </header>
+
+   <!-- HERO SECTION -->
+
+    <div class="hero-section" id="home">
+  <img src="Hero Photos/boppyshero1.png" alt="Boppys Chicken Hero Image 1" class="active"/>
+  <img src="Hero Photos/boppyshero2.png" alt="Boppys Chicken Hero Image 2"/>
+  <img src="Hero Photos/boppyshero3.png" alt="Boppys Chicken Hero Image 3"/>
+  <img src="Hero Photos/boppyshero4.png" alt="Boppys Chicken Hero Image 4"/>
+  </div> 
+
+  <!-- MAIN MENU -->
+
+   <div id="intro-text">
+     <h1>Our Menu</h1>
+   </div>
+
+   <section id="menu">
+    <div class="menu-search">
+    <input type="text" id="menuSearchInput" placeholder="Search the menu... 🍗">
+  </div>
+
+     <div class="menu-heading">
+      <h2>The Finest Chicken In The Land</h2>
+       <p><em>“Crispy. Juicy. Legendary.”</em></p>
+
+     <div class="menu-item secret-item" style="display: none;">
+      <img src="Menu Items/secret.png" alt="The Secret Clucker"/>
+      <p>🕵️‍♂️ The Secret Clucker — You didn’t hear it from us… double-crisp golden fillets, cool mayo, sharp pickles, crunchy lettuce, and a wicked kick of Boppys Sweet-Heat Jam. Only for those who know the code. 🤫</p>
+      <p class="item-price">£14.99</p>
+      <button>Add to Basket 🛒</button>
+     </div>
+     
+
+     </div>
+     <div class="menu-container">
+     <div class="menu-item">
+       <img src="Menu Items/mothercluckermeal.png" alt="The Mother Clucker"/>
+       <p>🔥 The Mother Clucker — The heavyweight champ of burgers. A crispy golden chicken fillet stacked on fresh slaw, topped with tangy sauce and tucked into a glossy brioche bun. Comes with fries and a drink for the ultimate feed.</p>
+       <p class="item-price">£12.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/infernocluckmeal.png" alt="The Inferno Cluck"/>
+       <p>🔥 The Inferno Cluck — Turn up the heat with this burger! This bad boy brings the fire with spicy glazed chicken, cool ranch drizzle, and a crunch of pickles — all packed in a toasted sesame bun. Served with fries and a drink to tame the flames.</p>
+       <p class="item-price">£12.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/theveganheatwavemeal.png" alt="The Vegan HeatWave"/>
+       <p>🔥 The Vegan Heatwave — 100% plant-powered burger and packing serious flavour. A crispy vegan fillet layered with fresh greens, pickles, red onion, and a spicy kick of heat — finished with creamy vegan mayo. Served with fries and a drink for the ultimate guilt-free feast.</p>
+       <p class="item-price">£10.99</p>
+       <button>Add to Basket 🛒</button>
+      </div>
+      <div class="menu-item">
+       <img src="Menu Items/chickentendersmeal.png" alt="Juicy Chicken Tenders"/>
+       <p>🔥 Juicy Chicken Tenders — Golden, crispy, and packed with flavour. Freshly fried strips of tender chicken served with fries, your choice of dip, and a drink — simple, classic, and downright delicious.</p>
+        <p class="item-price">£11.99</p>
+       <button>Add to Basket 🛒</button>
+      </div>
+       <div class="menu-item">
+       <img src="Menu Items/chickennuggetmeal.png" alt="Succulent Chicken Nuggets"/>
+       <p>🔥 Succulent Chicken Nuggets — Golden on the outside, tender on the inside. Bite-sized perfection served with crispy fries, your favourite dip, and an ice-cold drink — pure comfort in a box.</p>
+         <p class="item-price">£10.99</p>
+       <button>Add to Basket 🛒</button>
+      </div>
+       <div class="menu-item">
+       <img src="Menu Items/chickenwingsmeal.png" alt="Hot & Spicy Chicken Wings"/>
+       <p>🔥 Hot & Spicy Chicken Wings Meal — Feel the heat with crispy, fiery wings served with golden fries, a cool creamy dip, and an ice-cold drink to wash it all down. Spice, crunch, and refreshment in every bite!</p>
+         <p class="item-price">£9.99</p>
+       <button>Add to Basket 🛒</button>
+      </div>
+     </div>
+       
+     <!-- SIDES MENU -->
+     
+      <div class="menu-heading">
+      <h2>On the Side, But Never Second Best</h2>
+        <p><em>“Warning: may upstage your main.”</em></p>
+     </div>
+     <div class="menu-container">
+     <div class="menu-item">
+       <img src="Menu Items/sidesfries.png" alt="Fries"/>
+       <p>🍟 Our Signature Fries - Crispy on the outside, fluffy on the inside — these are the fries that made Boppys famous! The perfect golden crunch in every bite.</p>
+       <p class="item-price">£2.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/sidesgravy.png" alt="Chicken Gravy"/>
+       <p>🍗 Our Famous Chicken Gravy - Rich, smooth, and packed with that signature Boppys flavor. Pour it, dip it, or drown your meal in it — no judgment here!.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+       <div class="menu-item">
+       <img src="Menu Items/sidesmacandcheese.png" alt="Mac & Cheese"/>
+       <p>🧀 Our OG Mac & Cheese - Creamy, cheesy, and topped with a crunchy golden crumb. This is the mac that started it all — the definition of cheesy perfection.</p>
+       <p class="item-price">£3.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+       <div class="menu-item">
+       <img src="Menu Items/sidescornoncob.png" alt="Corn On The Cob"/>
+       <p>🌽 Our Corn on the Cob - Sweet, buttery, and perfectly golden — our corn on the cob is the ultimate comfort bite to pair with your chicken feast. Simple, juicy, and always satisfying.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+        <div class="menu-item">
+       <img src="Menu Items/sidesslaw.png" alt="Homemade Slaw"/>
+       <p>🥬 Our Homemade Slaw - Cool, creamy, and crunchy — our house-made slaw brings the perfect balance to your meal with every refreshing bite.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+        <div class="menu-item">
+       <img src="Menu Items/sidessauces.png" alt="Selection Of Sauces"/>
+       <p>🥣 Our Selection of Sauces - From tangy to creamy to spicy, we’ve got a sauce for every craving. Mix, match, and find your favorite Boppys combo.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+    </div>
+     
+      <!-- DRINKS MENU -->
+     
+     <div class="menu-heading">
+      <h2>Sips that hit the spot</h2>
+        <p><em>“Because great chicken deserves great company.”</em></p>
+     </div>
+     <div class="menu-container">
+     <div class="menu-item">
+       <img src="Menu Items/cupdrink.png" alt="Cup Drinks"/>
+       <p>🧃 Our Selection of Cup Drinks - Crisp, cold, and refreshingly fizzy — the perfect partner for any meal. Pick your favourite and sip happy!</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/cupmilkshake.png" alt="Milkshakes"/>
+       <p>🥤 Our Selection of Milkshakes - Thick, creamy, and downright dreamy. Blended to perfection and topped with that extra bit of mmm.</p>
+       <p class="item-price">£3.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>  
+       <div class="menu-item">
+       <img src="Menu Items/cupwater.png" alt="Water"/>
+       <p>💧 Our Refreshing Bottled Water – Pure, crisp, and perfectly chilled. The ultimate thirst-quencher to keep things cool while you turn up the heat with your Boppy’s feast.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>  
+     </div>
+     
+      <!-- DESSERT MENU -->
+     
+         <div class="menu-heading">
+      <h2>Treat yourself — you’ve earned it.</h2>
+        <p><em>“The perfect finish to every feast.”</em></p>
+     </div>
+     <div class="menu-container">
+     <div class="menu-item">
+       <img src="Menu Items/dessertcookie.png" alt="Cookie"/>
+       <p>🍪 Indulgent Chocolate Chip Cookie - Soft, chewy, and packed with gooey chocolate chunks — the ultimate sweet dessert to finish off your meal.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/dessertsundae.png" alt="Oreo Sundae"/>
+       <p>🍨 The Best Oreo Sundae - Velvety soft-serve swirled with crushed Oreos, rich chocolate drizzle, and a sprinkle of white chocolate — dessert dreams, delivered.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+     <div class="menu-item">
+       <img src="Menu Items/dessertdonut.png" alt="Toasted Meringue Doughnut "/>
+       <p>🍩 Beautiful Toasted Meringue Doughnut - A show-stopping dessert doughnut topped with creamy, toasted meringue and a vibrant glaze — indulgence that looks as good as it tastes.</p>
+       <p class="item-price">£1.99</p>
+       <button>Add to Basket 🛒</button>
+     </div>
+       </div>
+     
+   </section>
+   
+   <div class="delivery-services">
+    <div class="delivery-logo">
+         <img src="https://cdn.dribbble.com/userupload/27193241/file/original-b7aa7440a5ce26ae370b4ba9f2222bf4.jpg" alt="Uber Eats Logo"/>
+         </div>
+   <div class="delivery-logo">
+         <img src="https://www.just-eat.co.uk/apple-touch-icon-180x180.png" alt="JustEat Logo"/>
+         </div>
+   <div class="delivery-logo">
+         <img src="https://dpd-12774-s3.s3.eu-west-2.amazonaws.com/assets/5516/1487/3568/deliveroo-logo-home-thumb-1067x600_1.jpg" alt="Deliveroo Logo"/>
+         </div>
+  </div>  
+   
+   <!-- MERCH SECTION -->
+
+<section id="merch">
+  <div class="merch-heading">
+  <h2>Merch Hot Off the Grill</h2>
+  <p><em>“Cooked up for true Boppy’s fans.”</em></p>
+  </div>
+  
+  <div class="merch-carousel swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppystop2.png" alt="Classic T-Shirt" class="merch-image">
+        <h3 class="merch-name">Classic T-Shirt</h3>
+        <p class="merch-price">£24.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppystop1.png" alt="Big Logo T-shirt" class="merch-image">
+        <h3 class="merch-name">Big Logo T-shirt</h3>
+        <p class="merch-price">£24.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppysphonecase1.png" alt="Phone Case" class="merch-image">
+        <h3 class="merch-name">Phone Case</h3>
+        <p class="merch-price">£12.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppysflask1.png" alt="Water Flask" class="merch-image">
+        <h3 class="merch-name">Thirst Quencher Flask</h3>
+        <p class="merch-price">£29.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppyscup1.png" alt="Mug" class="merch-image">
+        <h3 class="merch-name">Branded Mug</h3>
+        <p class="merch-price">£9.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+
+      <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppyscap.png" alt="Cap" class="merch-image">
+        <h3 class="merch-name">Baseball Cap</h3>
+        <p class="merch-price">£19.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+      
+       <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppyscandle1.png" alt="Candle" class="merch-image">
+        <h3 class="merch-name">Fried Chicken Candle</h3>
+        <p class="merch-price">£11.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+      
+       <div class="swiper-slide merch-item">
+        <img src="Merch Items/boppysbook1.png" alt="Notebook" class="merch-image">
+        <h3 class="merch-name">Branded Notebook</h3>
+        <p class="merch-price">£5.99</p>
+        <button>Add to Basket 🛒</button>
+      </div>
+    </div>
+  </div>
+   </section>
+
+   <!-- STORE FINDER -->
+   
+  <section id="finder">
+  <h2>Find Your Nearest Boppys!</h2>
+  <p>Good food’s never far—discover your local spot in seconds.</p>
+    <div class="finder-map">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1OouYhnyTmbNoxYiUMDEt6EQEW-ar0xE&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+  </div>
+   </section>
+
+   <!-- CUSTOMER REVIEWS -->
+  
+   <section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p class="review-text">"Boppys never disappoints – the wings are unreal!"</p>
+        <div class="stars">★★★★★</div>
+        <p class="reviewer">– Alex P.</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">"Fast delivery and always hot. 10/10 every time!"</p>
+        <div class="stars">★★★★★</div>
+        <p class="reviewer">– Sarah M.</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">"Our family Friday nights are all about Boppys now!"</p>
+        <div class="stars">★★★★★</div>
+        <p class="reviewer">– Tom & Family</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+  <footer id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Boppys Chicken Shop</h3>
+      <p>Serving crispy, juicy goodness across the North West.  
+      Freshly fried, always Boppin’.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#merch">Merch</a></li>
+        <li><a href="#finder">Store Finder</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <p>Email: <a href="mailto:hello@boppys.co.uk">hello@boppys.co.uk</a></p>
+      <p>Phone: <a href="tel:+441234567890">01234 567 890</a></p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">👍</a>
+        <a href="#" aria-label="TikTok">🎵</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Boppys Chicken Shop. All rights reserved.</p>
+  </div>
+</footer>
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+ </body>
+</html>

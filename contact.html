@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Boppys Chicken Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #fff7f7;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(180deg, #dd1111 0%, #a50e0e 100%);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 6px solid #ffcb05;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+     #back-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #dd1111;
+      background-color: white;
+      color: #dd1111;
+      font-family: 'Luckiest Guy', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+     #back-button:hover {
+      background-color: yellow;
+      color: #dd1111;
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3rem;
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Luckiest Guy', cursive;
+      color: #dd1111;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #a50e0e;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 2px solid #ffcb05;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Work Sans', sans-serif;
+      transition: 0.2s ease-in-out;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #dd1111;
+      box-shadow: 0 0 5px rgba(221, 17, 17, 0.4);
+    }
+
+    .send-button {
+      background-color: #dd1111;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .send-button:hover {
+      background-color: #a50e0e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Boppys</h1>
+    <button id="back-button" onclick="window.location.href='index.html'"> Back to the Boppys Website</button>
+  </header>
+
+  <main>
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you! Whether you’ve got feedback, questions, or just want to talk chicken, drop us a message below.</p>
+    <p>Or if you are a business looking to give the maker of this wonderful website a chance, fill in the details and the contact form will go to my email - Thank you!</p>
+    
+    <form action="https://getform.io/f/bjjrzykb" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+      <button type="submit" class="send-button">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Boppys Chicken Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+  </script>
+</body>
+</html>
